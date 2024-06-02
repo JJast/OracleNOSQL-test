@@ -284,6 +284,10 @@ def main():
         handle = get_handle()
     
         multiplication = input("Enter how many times to multiply the amount of data: ")
+        try:
+            multiplication = int(multiplication)
+        except:
+            print("Intiger not provided")
         if not isinstance(multiplication, int):
             print("Provided multiplication factor is not an integer. Defaulting to 1.")
             multiplication = 1
